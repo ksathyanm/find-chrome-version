@@ -2,25 +2,32 @@
   "name": "@ksathyanm/find-chrome-version",
   "version": "1.0.0",
   "description": "Finds installed Chrome version",
+  "keywords": [
+    "chrome"
+  ],
+  "homepage": "https://github.com/ksathyanm/find-chrome-version#readme",
+  "bugs": {
+    "url": "https://github.com/ksathyanm/find-chrome-version/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksathyanm/find-chrome-version.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Sathyamoorthi Kandhasamy",
+    "email": "ksathyanm@gmail.com",
+    "url": "https://github.com/ksathyanm"
+  },
+  "files": [
+    "index.js"
+  ],
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "mocha ./test.js --timeout 10000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ksathyanm/find-chrome-version.git"
-  },
-  "keywords": [
-    "chrome"
-  ],
-  "author": "Sathyamoorthi Kandhasamy <ksathyanm@gmail.com> (https://github.com/ksathyanm)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ksathyanm/find-chrome-version/issues"
-  },
-  "homepage": "https://github.com/ksathyanm/find-chrome-version#readme",
   "dependencies": {
     "chrome-launcher": "^0.11.1",
     "chrome-remote-interface": "^0.27.2"
@@ -30,5 +37,8 @@
     "eslint": "^6.0.1",
     "eslint-config-google": "^0.13.0",
     "mocha": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

@@ -7,7 +7,7 @@ Finds installed Chrome version.
 ## Install
 
 ```bash
-$ npm install find-chrome-version
+npm install find-chrome-version
 ```
 
 ## Usage
@@ -17,6 +17,6 @@ const findChromeVersion = require("find-chrome-version");
 
 (async () => {
   await chromeVersion = await findChromeVersion();
-  console.log(`Your Chrome version is ${chromeVersion}`)
+  console.log(`Your Chrome version is ${chromeVersion}`);
 })();
 ```
