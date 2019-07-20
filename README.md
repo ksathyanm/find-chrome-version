@@ -1,2 +1,3 @@
 # find-chrome-version
-Find installed Chrome version
+
+Finds installed Chrome version
