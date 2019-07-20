@@ -16,7 +16,7 @@ npm install find-chrome-version
 const findChromeVersion = require("find-chrome-version");
 
 (async () => {
-  await chromeVersion = await findChromeVersion();
+  const chromeVersion = await findChromeVersion();
   console.log(`Your Chrome version is ${chromeVersion}`);
 })();
 ```
