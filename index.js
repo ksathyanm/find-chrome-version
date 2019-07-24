@@ -6,7 +6,7 @@ const chromeFlags = [
   "--headless",
 ]
 
-const regExp = /HeadlessChrome\/(?<chromeVersion>.*)/
+const regExp = /HeadlessChrome\/(.*)/
 
 module.exports = async () => {
   const chrome = await ChromeLauncher.launch({ chromeFlags })
@@ -14,5 +14,5 @@ module.exports = async () => {
   const { product } = await protocol.Browser.getVersion()
   protocol.close()
   chrome.kill()
-  return regExp.exec(product).groups.chromeVersion
+  return regExp.exec(product)[1]
 }
