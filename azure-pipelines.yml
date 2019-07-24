@@ -40,6 +40,12 @@ steps:
     versionSpec: $(node_version)
   displayName: 'Install Node.js'
 
+- script: |
+    brew install brew-cask
+    brew cask install google-chrome
+  condition: eq( variables['Agent.OS'], 'Darwin' )
+  displayName: 'Install Chrome on macOS'
+
 - script: 'npm install'
   displayName: 'Install Dependencies'
 
