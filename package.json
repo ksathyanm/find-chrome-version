@@ -3,27 +3,20 @@
   "version": "1.0.1",
   "description": "Finds installed Chrome version",
   "keywords": [
-    "chrome"
+    "chrome",
+    "version"
   ],
   "homepage": "https://github.com/ksathyanm/find-chrome-version#readme",
-  "bugs": {
-    "url": "https://github.com/ksathyanm/find-chrome-version/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ksathyanm/find-chrome-version.git"
-  },
+  "bugs": "https://github.com/ksathyanm/find-chrome-version/issues",
+  "repository": "ksathyanm/find-chrome-version",
   "license": "MIT",
-  "author": {
-    "name": "Sathyamoorthi Kandhasamy",
-    "email": "ksathyanm@gmail.com",
-    "url": "https://github.com/ksathyanm"
-  },
+  "author": "Sathyamoorthi Kandhasamy",
   "files": [
     "index.js"
   ],
   "main": "index.js",
   "scripts": {
+    "ci": "npm run lint && npm run test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "mocha ./test.js --timeout 10000"
@@ -39,6 +32,6 @@
     "mocha": "^6.2.0"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=8"
   }
 }
