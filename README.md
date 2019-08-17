@@ -1,6 +1,9 @@
 # Find chrome version
 
 [![Build Status](https://dev.azure.com/ksathyanm/GitHub/_apis/build/status/ksathyanm.find-chrome-version?branchName=master)](https://dev.azure.com/ksathyanm/GitHub/_build/latest?definitionId=1&branchName=master)
+[![NPM Version](https://img.shields.io/npm/v/find-chrome-version)](https://www.npmjs.com/package/find-chrome-version)
+[![Node.js Version](https://img.shields.io/node/v/find-chrome-version)](https://nodejs.org/en/download/)
+[![NPM Downloads](https://img.shields.io/npm/dw/find-chrome-version)](https://www.npmjs.com/package/find-chrome-version)
 
 Finds installed Chrome version.
 
