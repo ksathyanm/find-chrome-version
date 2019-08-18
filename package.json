@@ -26,10 +26,10 @@
     "chrome-remote-interface": "^0.27.2"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^6.1.0",
-    "eslint-config-google": "^0.13.0",
-    "mocha": "^6.2.0"
+    "chai": "4.2.0",
+    "eslint": "6.1.0",
+    "eslint-config-google": "0.13.0",
+    "mocha": "6.2.0"
   },
   "engines": {
     "node": ">=8"
