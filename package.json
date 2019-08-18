@@ -4,7 +4,8 @@
   "description": "Finds installed Chrome version",
   "keywords": [
     "chrome",
-    "version"
+    "version",
+    "chromedriver"
   ],
   "homepage": "https://github.com/ksathyanm/find-chrome-version#readme",
   "bugs": "https://github.com/ksathyanm/find-chrome-version/issues",
