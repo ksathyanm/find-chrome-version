@@ -4,6 +4,7 @@
 [![NPM Version](https://img.shields.io/npm/v/find-chrome-version)](https://www.npmjs.com/package/find-chrome-version)
 [![Node.js Version](https://img.shields.io/node/v/find-chrome-version)](https://nodejs.org/en/download/)
 [![NPM Downloads](https://img.shields.io/npm/dw/find-chrome-version)](https://www.npmjs.com/package/find-chrome-version)
+[![Known Vulnerabilities](https://snyk.io/test/npm/find-chrome-version/1.0.2/badge.svg)](https://snyk.io/test/npm/find-chrome-version/1.0.2)
 
 Finds installed Chrome version.
 
