@@ -1,13 +1,13 @@
-const execa = require('execa')
-const { Launcher } = require('chrome-launcher')
+const execa = require("execa")
+const { Launcher } = require("chrome-launcher")
 
 const regExp = /\d+\.\d+\.\d+\.\d+/
 
 module.exports = async (options = {}) => {
-  const { stable } = options;
+  const { stable } = options
   const installs = Launcher.getInstallations()
-  const chrome = stable ? installs.find(item => {
-    if (item.indexOf('stable') > 0) {
+  const chrome = stable ? installs.find((item) => {
+    if (item.indexOf("stable") > 0) {
       return true
     }
     // Skip canary version, chromium and chrome-wrapper
@@ -18,15 +18,22 @@ module.exports = async (options = {}) => {
   }) : installs[0]
 
   if (!chrome) {
-    throw new Error('Chrome installation not found')
+    throw new Error("Chrome installation not found")
   }
 
   let result
   // Windows
-  if (process.platform === 'win32') {
-    result = await execa('wmic', ['datafile', 'where', `name="${chrome.replace(/\\/g, '\\\\')}"`, 'get', 'Version', '/value'])
+  if (process.platform === "win32") {
+    result = await execa("wmic", [
+      "datafile",
+      "where",
+      `name="${chrome.replace(/\\/g, "\\\\")}"`,
+      "get",
+      "Version",
+      "/value",
+    ])
   } else {
-    result = await execa(chrome, ['--version'])
+    result = await execa(chrome, ["--version"])
   }
   return result.stdout.match(regExp)[0]
 }
