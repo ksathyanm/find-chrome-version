@@ -1,18 +1,39 @@
-const ChromeLauncher = require("chrome-launcher")
-const CDP = require("chrome-remote-interface")
+const execa = require("execa")
+const { Launcher } = require("chrome-launcher")
 
-const chromeFlags = [
-  "--no-sandbox",
-  "--headless",
-]
+const regExp = /\d+\.\d+\.\d+\.\d+/
 
-const regExp = /HeadlessChrome\/(.*)/
+module.exports = async (options = {}) => {
+  const { stable } = options
+  const installs = Launcher.getInstallations()
+  const chrome = stable ? installs.find((item) => {
+    if (item.indexOf("stable") > 0) {
+      return true
+    }
+    // Skip canary version, chromium and chrome-wrapper
+    if (/canary|sxs|chromium|wrapper/i.test(item)) {
+      return false
+    }
+    return true
+  }) : installs[0]
 
-module.exports = async () => {
-  const chrome = await ChromeLauncher.launch({ chromeFlags })
-  const protocol = await CDP({ port: chrome.port })
-  const { product } = await protocol.Browser.getVersion()
-  protocol.close()
-  chrome.kill()
-  return regExp.exec(product)[1]
+  if (!chrome) {
+    throw new Error("Chrome installation not found")
+  }
+
+  let result
+  // Windows
+  if (process.platform === "win32") {
+    result = await execa("wmic", [
+      "datafile",
+      "where",
+      `name="${chrome.replace(/\\/g, "\\\\")}"`,
+      "get",
+      "Version",
+      "/value",
+    ])
+  } else {
+    result = await execa(chrome, ["--version"])
+  }
+  return result.stdout.match(regExp)[0]
 }

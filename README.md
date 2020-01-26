@@ -24,3 +24,6 @@ const findChromeVersion = require("find-chrome-version");
   console.log(`Your Chrome version is ${chromeVersion}`);
 })();
 ```
+
+By default, this will return the Canary version if you installed both the stable version and the Canary version,
+If you prefer the stable version, pass `{ stable: true }` to it.
