@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "chrome-launcher": "^0.12.0",
-    "chrome-remote-interface": "^0.28.0"
+    "chrome-remote-interface": "^0.28.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
