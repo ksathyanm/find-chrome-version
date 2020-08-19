@@ -20,7 +20,7 @@
     "ci": "npm run lint && npm run test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "mocha ./test.js --timeout 10000"
+    "test": "mocha ./test.js --timeout 15000"
   },
   "dependencies": {
     "chrome-launcher": "^0.13.4",
