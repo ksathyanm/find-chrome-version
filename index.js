@@ -10,9 +10,7 @@ const regExp = /HeadlessChrome\/(.*)/
 
 module.exports = async () => {
   const chrome = await ChromeLauncher.launch({ chromeFlags })
-  const protocol = await CDP({ port: chrome.port })
-  const { product } = await protocol.Browser.getVersion()
-  protocol.close()
+  const version = await CDP.Version({ port: chrome.port })
   chrome.kill()
-  return regExp.exec(product)[1]
+  return regExp.exec(version.Browser)[1]
 }
