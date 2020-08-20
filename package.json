@@ -23,8 +23,7 @@
     "test": "mocha ./test.js --timeout 15000"
   },
   "dependencies": {
-    "chrome-launcher": "^0.13.4",
-    "chrome-remote-interface": "^0.28.2"
+    "chrome-launcher": "^0.13.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
