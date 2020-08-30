@@ -6,7 +6,7 @@ describe("find chrome version", () => {
   it("finds chrome version", async () => {
     try {
       const chromeVersion = await findChromeVersion()
-      console.log(chromeVersion)
+      console.log(`Version: ${chromeVersion}`)
       expect(chromeVersion).to.exist
       expect(chromeVersion).to.not.be.empty
       expect(chromeVersion).to.be.a("string")

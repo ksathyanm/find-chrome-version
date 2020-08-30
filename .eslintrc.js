@@ -1,6 +1,7 @@
 module.exports = {
   "extends": [
     "eslint:recommended",
+    "plugin:node/recommended",
     "google",
   ],
   "env": {
@@ -10,6 +11,7 @@ module.exports = {
   },
   "parserOptions": {
     "ecmaVersion": 2020,
+    "sourceType": "script",
   },
   "rules": {
     "quotes": ["error", "double"],
