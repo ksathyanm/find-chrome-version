@@ -1,6 +1,9 @@
 # Find chrome version
 
-[![Build Status](https://dev.azure.com/ksathyanm/GitHub/_apis/build/status/ksathyanm.find-chrome-version?branchName=master)](https://dev.azure.com/ksathyanm/GitHub/_build/latest?definitionId=1&branchName=master)
+![Test windows status](https://github.com/ksathyanm/find-edge-version/workflows/test-windows/badge.svg)
+![Test macOS status](https://github.com/ksathyanm/find-edge-version/workflows/test-macOS/badge.svg)
+![Test linux status](https://github.com/ksathyanm/find-edge-version/workflows/test-linux/badge.svg)
+
 [![NPM Version](https://img.shields.io/npm/v/find-chrome-version)](https://www.npmjs.com/package/find-chrome-version)
 [![Node.js Version](https://img.shields.io/node/v/find-chrome-version)](https://nodejs.org/en/download/)
 [![NPM Downloads](https://img.shields.io/npm/dw/find-chrome-version)](https://www.npmjs.com/package/find-chrome-version)
@@ -17,10 +20,11 @@ npm install find-chrome-version
 ## Usage
 
 ```js
-const findChromeVersion = require("find-chrome-version");
+const findChromeVersion = require("find-chrome-version")
 
-(async () => {
-  const chromeVersion = await findChromeVersion();
-  console.log(`Your Chrome version is ${chromeVersion}`);
-})();
+const example = async () => {
+  const chromeVersion = await findChromeVersion()
+  console.log(`Your Chrome version is ${chromeVersion}`)
+}
+example()
 ```
