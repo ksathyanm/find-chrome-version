@@ -1,6 +1,12 @@
 name: test-windows
 
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - "**"
 
 jobs:
   test-windows:
