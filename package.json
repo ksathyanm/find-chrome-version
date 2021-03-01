@@ -26,13 +26,13 @@
     "chrome-launcher": "^0.13.4"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.0",
     "eslint": "^7.21.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-node": "^11.1.0",
-    "mocha": "^8.2.1"
+    "mocha": "^8.3.0"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=v10.24.0"
   }
 }
