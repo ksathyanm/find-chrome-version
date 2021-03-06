@@ -30,7 +30,7 @@
     "eslint": "^7.21.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-node": "^11.1.0",
-    "mocha": "^8.3.0"
+    "mocha": "^8.3.1"
   },
   "engines": {
     "node": ">=v10.24.0"
