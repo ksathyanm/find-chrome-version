@@ -1,6 +1,6 @@
-const http = require("http")
-const util = require("util")
-const ChromeLauncher = require("chrome-launcher")
+import http from "node:http"
+import util from "node:util"
+import ChromeLauncher from "chrome-launcher"
 
 const chromeFlags = [
   "--no-sandbox",
@@ -26,12 +26,12 @@ const getRequestAsync = util.promisify((options, callback) => {
     })
   })
   request.setTimeout(REQUEST_TIMEOUT, () => {
-    request.abort()
+    request.destroy()
   })
   request.on("error", callback)
 })
 
-module.exports = async () => {
+export default async () => {
   const chrome = await ChromeLauncher.launch({ chromeFlags })
   const options = {
     host: "127.0.0.1",

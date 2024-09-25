@@ -12,10 +12,11 @@
   "repository": "ksathyanm/find-chrome-version",
   "license": "MIT",
   "author": "Sathyamoorthi Kandhasamy",
+  "type": "module",
+  "exports": "./index.js",
   "files": [
     "index.js"
   ],
-  "main": "index.js",
   "scripts": {
     "ci": "npm run lint && npm run test",
     "lint": "eslint .",
@@ -23,16 +24,16 @@
     "test": "mocha ./test.js --timeout 30000"
   },
   "dependencies": {
-    "chrome-launcher": "~0.15.2"
+    "chrome-launcher": "^1.1.2"
   },
   "devDependencies": {
-    "chai": "^4.5.0",
+    "chai": "^5.1.1",
     "eslint": "^8.57.1",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-node": "^11.1.0",
-    "mocha": "^9.2.2"
+    "mocha": "^10.7.3"
   },
   "engines": {
-    "node": ">=v12.22.12"
+    "node": ">=v18.20.4"
   }
 }
