@@ -1,6 +1,6 @@
 import http from "node:http"
 import util from "node:util"
-import ChromeLauncher from "chrome-launcher"
+import * as ChromeLauncher from "chrome-launcher"
 
 const chromeFlags = [
   "--no-sandbox",
