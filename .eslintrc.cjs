@@ -10,8 +10,8 @@ module.exports = {
     "es2020": true,
   },
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "script",
+    "ecmaVersion": 2021,
+    "sourceType": "module",
   },
   "rules": {
     "quotes": ["error", "double"],
