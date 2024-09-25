@@ -1,13 +1,13 @@
-const http = require("http")
-const util = require("util")
-const ChromeLauncher = require("chrome-launcher")
+import http from "node:http"
+import util from "node:util"
+import * as ChromeLauncher from "chrome-launcher"
 
 const chromeFlags = [
   "--no-sandbox",
   "--headless",
 ]
 
-const regExp = /HeadlessChrome\/(.*)/
+const regExp = /(HeadlessChrome|Chrome)\/(.*)/
 
 const REQUEST_TIMEOUT = 10000
 
@@ -26,12 +26,12 @@ const getRequestAsync = util.promisify((options, callback) => {
     })
   })
   request.setTimeout(REQUEST_TIMEOUT, () => {
-    request.abort()
+    request.destroy()
   })
   request.on("error", callback)
 })
 
-module.exports = async () => {
+export default async () => {
   const chrome = await ChromeLauncher.launch({ chromeFlags })
   const options = {
     host: "127.0.0.1",
@@ -40,5 +40,5 @@ module.exports = async () => {
   }
   const version = await getRequestAsync(options)
   chrome.kill()
-  return regExp.exec(version.Browser)[1]
+  return regExp.exec(version.Browser)[2]
 }

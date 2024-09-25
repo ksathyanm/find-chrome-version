@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-const { expect } = require("chai")
-const findChromeVersion = require("./index.js")
+import { expect } from "chai"
+import findChromeVersion from "./index.js"
 
 describe("find chrome version", () => {
   it("finds chrome version", async () => {
