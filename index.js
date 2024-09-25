@@ -7,7 +7,7 @@ const chromeFlags = [
   "--headless",
 ]
 
-const regExp = /HeadlessChrome\/(.*)/
+const regExp = /(HeadlessChrome|Chrome)\/(.*)/
 
 const REQUEST_TIMEOUT = 10000
 
@@ -40,5 +40,5 @@ module.exports = async () => {
   }
   const version = await getRequestAsync(options)
   chrome.kill()
-  return regExp.exec(version.Browser)[1]
+  return regExp.exec(version.Browser)[2]
 }
