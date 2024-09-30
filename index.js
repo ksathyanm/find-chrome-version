@@ -4,7 +4,7 @@ import * as ChromeLauncher from "chrome-launcher"
 
 const chromeFlags = [
   "--no-sandbox",
-  "--headless",
+  "--headless=new",
 ]
 
 const regExp = /(HeadlessChrome|Chrome)\/(.*)/
