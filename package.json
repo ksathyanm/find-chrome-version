@@ -27,7 +27,7 @@
     "chrome-launcher": "^1.1.2"
   },
   "devDependencies": {
-    "chai": "^5.1.1",
+    "chai": "^6.2.2",
     "eslint": "^8.57.1",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-node": "^11.1.0",
